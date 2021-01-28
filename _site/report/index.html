@@ -80,12 +80,19 @@
 </style>
   </div>
 
+
+
 <img class="peace" width="154px;" height="154px;" src="/images/fixit-hand-icon.png" alt="peace">
 
 <img class="fixit" width="144px;" height="56px;" src="/images/fixIT.logo.png" alt="fixIT">
  
 
  <img class="dots" width="88px;" height="88px;" src="/images/fix-it-dots.png" alt="fixIT">
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.18.1"></script>
 
   </body>
 
@@ -109,6 +116,45 @@
 
    <script src="/js/script.js"></script>
 
-            
+           <script>
+      var placesAutocomplete = places({
+        appId: "plTS8A3CRH9X",
+        apiKey: "c8b644debbf65a39cc0b16ed078d41ce",
+        container: document.querySelector("#address-input"),
+      });
+
+      const reconfigurableOptions = {
+  language: 'en', // Receives results in German
+  countries: ['gb'], // Search in the United States of America and in the Russian Federation
+  type: 'address', // Search only for cities names
+  aroundLatLngViaIP: true // disable the extra search/boost around the source IP
+};
+
+   placesAutocomplete.on("change", e => {
+        document.querySelector("#address-input").style.display = "none";
+
+let typeformURL = "https://research.typeform.com/to/Nev71bkQ";
+let hidden_values = {
+address: `${e.suggestion.value}`,
+          postcode: `${e.suggestion.postcode}`,
+          country: `${e.suggestion.country}`,
+          countryCode: `${e.suggestion.countryCode}`,
+          county: `${e.suggestion.county}`,
+          city: `${e.suggestion.city}`,
+          lat: `${e.suggestion.latlng.lat}`,
+          lng: `${e.suggestion.latlng.lng}`
+};
+let hidden_query = Object.keys(hidden_values).map((key)=> `${key}=${hidden_values[key]}`).join('&')
+        let completeURL = `${typeformURL}#${Object.keys(hidden_values).map((key)=> `${key}=${hidden_values[key]}`).join('&')}`
+
+
+  window.location = completeURL
+  }
+);
+
+</script> 
+
+<script src="https://embed.typeform.com/embed.js"></script>
+
 
 </html>
