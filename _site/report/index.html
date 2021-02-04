@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -43,16 +43,20 @@
 <!--  Non-Essential, But Required for Analytics -->
 
 <meta name="twitter:site" content="@fixIT">
+
+
+<!-- Memberstack --> 
+<script src="https://api.memberstack.io/static/memberstack.js?custom" data-memberstack-id="27459a07a94cdb21285f33aa1e4b3931"> </script> 
 </head>
 
-  <body class="d-flex flex-column">
+<body class="d-flex flex-column">
 
 <a href="https://fixit.rentals/"><img class="logo" width="174px;" height="174px;" src="/images/fixit-home-icon.png" alt="Your Home"></a>
 
 <a href="https://fixit.rentals/"><img class="fixit" width="144px;" height="56px;" src="/images/fixIT.logo.png" alt="fixIT"></a>
 
-      <div id="page-content">
-    <div class="container-fluid p-0 m-0">  
+<div id="page-content">
+<div class="container-fluid p-0 m-0">  
 
 <!-- Page Content -->
 
@@ -78,18 +82,13 @@
 }
 
 </style>
-  </div>
-
-
+</div>
 
 <a href="https://fixit.rentals/"><img class="peace" width="154px;" height="154px;" src="/images/fixit-hand-icon.png" alt="peace"></a>
 
 <a href="https://fixit.rentals/"><img class="fixit" width="144px;" height="56px;" src="/images/fixIT.logo.png" alt="fixIT"></a>
  
-
- <a href="https://fixit.rentals/"><img class="dots" width="88px;" height="88px;" src="/images/fix-it-dots.png" alt="fixIT"></a>
-
-
+<a href="https://fixit.rentals/"><img class="dots" width="88px;" height="88px;" src="/images/fix-it-dots.png" alt="fixIT"></a>
 
 
 <script src="https://cdn.jsdelivr.net/npm/places.js@1.18.1"></script>
@@ -126,7 +125,7 @@
       const reconfigurableOptions = {
   language: 'en', // Receives results in German
   countries: ['gb'], // Search in the United States of America and in the Russian Federation
-  type: 'address', // Search only for cities names
+  type: 'city', // Search only for cities names
   aroundLatLngViaIP: true // disable the extra search/boost around the source IP
 };
 
