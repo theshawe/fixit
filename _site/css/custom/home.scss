@@ -1,0 +1,123 @@
+html,
+body {
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  scroll-behavior: smooth;
+  background-color: #3CA5DF;
+  font-family: 'Fredoka One', sans-serif;
+    height: 100%;
+}
+
+p {
+font-style: normal;
+font-weight: normal;
+font-size: 60px;
+line-height: 83px;
+text-align: center;
+letter-spacing: 0.115em;
+color: #FFFFFF;
+}
+
+
+.logo {
+
+position: absolute;
+width: 174px;
+height: 174px;
+left: 41px;
+top: 34px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.fixit {
+    /* fixIT.logo */
+
+position: absolute;
+top: 68px;
+right: 68px;
+
+font-family: Fredoka One;
+font-style: normal;
+font-weight: normal;
+font-size: 60px;
+line-height: 130px;
+/* or 217% */
+text-align: center;
+
+color: #E4F0FA;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.peace {
+
+position: absolute;
+width: 174px;
+height: 174px;
+left: 20px;
+bottom: 0px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.dots {
+position: absolute;
+bottom: 35px;
+right: 40px;
+color: #E4F0FA;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+#intro {
+    margin-top: 32.5vh;
+    max-width: 1111px;
+    text-align: center;
+}
+
+.login {
+    padding: .5em;
+    background: #f93742;
+    display: block;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 37px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.submit-again {
+    width: 100%;
+    padding: 0px 50px 50px 50px;
+    max-width: 500px;
+}
+
+.resubmit {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    padding-left: 220px;
+    padding-top: 50px;
+}
+
+.resubmit h2 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
