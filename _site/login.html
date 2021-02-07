@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Login - Memberstack Jekyll</title>
+
+    <link rel="stylesheet" href='/assets/css/main.css'>
+    <link rel="stylesheet" href='/assets/css/components.css'>
+    <link rel="stylesheet" href='/assets/css/members.css'>
+
+    <!-- Memberstack (IMPORTANT: replace with your Website Header Code) -->
+    <script src="https://api.memberstack.io/static/memberstack.js?custom" data-memberstack-id="14553698b3de7a0928235b5419878c42"> </script>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+  <body>
+
+    <div class="login-page-wrapper">
+  <div class="login-container w-form">
+    <div class="login-container"></div>
+
+    <h1 class="login-head">Login to continue</h1>
+
+    <form class="needs-validation" novalidate data-ms-form="login">
+      <div class="form-group">
+        <input class="form-control form-control-lg" type="email" placeholder="Email" required data-ms-member="email">
+      </div>
+      <div class="form-group">
+        <input class="form-control form-control-lg" type="password" placeholder="Password" required data-ms-member="password">
+      </div>
+      <div class="d-flex justify-content-end align-items-center form-group">
+        <a class="nav-link-style font-size-ms" href="#/ms/password-reset">Forgot password?</a>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+      <p class="font-size-sm pt-3 mb-0">Don't have an account? <a data-ms-form="signup" href='/' class='font-weight-medium'>Sign up</a></p>
+    </form>
+
+    <!-- Delete this -->
+    <div style="padding: 30px 0;
+                text-align:left;
+                font-size: 14px">
+      <div>Username: <b>test@memberstack-jekyll.com</b></div>
+      <div>Password: <b><span data-ms-member="password">freemember</span></b></div>
+    </div>
+    <!--/ Delete this -->
+
+  </div>
+</div>
+
+
+https://research.typeform.com/to/Nev71bkQ#address=Belfast,%20Northern%20Ireland,%20United%20Kingdom&postcode=BT1&country=United%20Kingdom&countryCode=gb&county=County%20Antrim&city=undefined&lat=54.5964&lng=-5.93028
+
+
+
+https://tripetto.app/run/3QJGJBWRIK#email=david@invisiblebuilding.com
+
+
+    <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src='/assets/js/members.js'></script>
+  </body>
+</html>
