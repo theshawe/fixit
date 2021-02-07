@@ -63,23 +63,79 @@
 
 <div id="intro" class="container">
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFk2x8VDEQ0xnDQhMPHKdL83EKydQz9TdHQxD-D9ugNQo6ydv8uHKvL9_F6gc1u7mN1-Zi54LiTyf8/pubhtml?widget=true&amp;headers=false" width="100%" height="600px"></iframe>
+<p>Your Address</p>
+
+
+<!-- <input type="search" id="address-input" placeholder="Where do you live?" /> -->
+
+
+<form action="" class="form" data-ms-form="signup">
+
+
+	<div class="form-group">
+    <label for="form-email">email</label>
+    <input type="email" data-ms-member="email" class="form-control" id="form-email" placeholder="hi@you.com"> 
+  </div>
+
+  <div class="form-group">
+    <label for="form-password">Password</label>
+    <input type="password" data-ms-member="password" class="form-control" id="form-password" placeholder="Password"> 
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="form-address">Address</label>
+    <input type="text" data-ms-member="address" class="form-control" id="form-address" placeholder="Address" />
+  </div>
+
+  <div class="form-group">
+    <label for="form-city">City</label>
+    <input type="text" data-ms-member="city" class="form-control" id="form-city" placeholder="City">
+  </div>
+
+  <div class="form-group">
+    <label for="form-zip">Post code*</label>
+    <input type="text" data-ms-member="post-code" class="form-control" id="form-zip" placeholder="Post code">
+  </div>
+
+
+   <input data-ms-membership="601b5b825a6c500004890466" type="submit" value="Submit">
+</form>
+
+<div data-ms-membership="601b5b825a6c500004890466" id="memberform" style="height: 900px;width: 100%;"></div>
 
 
 </div>
 
 
-<style>
+</div>
 
-	html, body {
-    background: #292525;
-}
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+<script>
+(function() {
+  var placesAutocomplete = places({
+    appId: '<YOUR_PLACES_APP_ID>',
+    apiKey: '<YOUR_PLACES_API_KEY>',
+    container: document.querySelector('#form-address'),
+    templates: {
+      value: function(suggestion) {
+        return suggestion.name;
+      }
+    }
+  }).configure({
+    type: 'address'
+  });
+  placesAutocomplete.on('change', function resultSelected(e) {
+    document.querySelector('#form-address2').value = e.suggestion.administrative || '';
+    document.querySelector('#form-city').value = e.suggestion.city || '';
+    document.querySelector('#form-zip').value = e.suggestion.postcode || '';
+  });
+})();
+</script>
 
-#intro {
-    margin-top: 222px;
-}
 
-</style>
+
 </div>
 
 <a href="https://fixit.rentals/"><img class="peace" width="154px;" height="154px;" src="/images/fixit-hand-icon.png" alt="peace"></a>
